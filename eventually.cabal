@@ -6,7 +6,7 @@ cabal-version: 2.2
 
 name:           eventually
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/eventually#readme>
+description:    Please see the README on GitHub at <https://github.com/william-zimmerman/eventually#readme>
 homepage:       https://github.com/william-zimmerman/eventually#readme
 bug-reports:    https://github.com/william-zimmerman/eventually/issues
 author:         William Zimmerman
@@ -25,6 +25,8 @@ source-repository head
 
 library
   exposed-modules:
+      Db.Jobs
+      Domain.Job
       Lib
   other-modules:
       Paths_eventually
@@ -36,6 +38,7 @@ library
   build-depends:
       base >=4.7 && <5
     , postgresql-simple
+    , uuid
   default-language: Haskell2010
 
 executable eventually-exe
@@ -51,6 +54,7 @@ executable eventually-exe
       base >=4.7 && <5
     , eventually
     , postgresql-simple
+    , uuid
   default-language: Haskell2010
 
 test-suite eventually-test
@@ -67,4 +71,5 @@ test-suite eventually-test
       base >=4.7 && <5
     , eventually
     , postgresql-simple
+    , uuid
   default-language: Haskell2010
