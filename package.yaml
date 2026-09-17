@@ -23,6 +23,7 @@ dependencies:
   - base >= 4.7 && < 5
   - postgresql-simple
   - uuid
+  - bytestring
 
 ghc-options:
   - -Wall
@@ -59,3 +60,5 @@ tests:
       - -with-rtsopts=-N
     dependencies:
       - eventually
+      - tasty
+      - tasty-hunit
